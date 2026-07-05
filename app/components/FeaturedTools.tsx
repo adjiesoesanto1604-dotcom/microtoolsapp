@@ -3,27 +3,27 @@ import ToolCard from "./ToolCard";
 
 export default function FeaturedTools() {
   return (
-    <section id="tools" className="bg-white py-20">
-      <div className="max-w-6xl mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Featured Tools
+    <section
+      id="tools"
+      className="bg-gray-50 py-20"
+    >
+      <div className="mx-auto max-w-6xl px-6">
+
+        <div className="text-center">
+          <h2 className="text-4xl font-bold text-gray-900">
+            Tools Favorit UMKM
           </h2>
-          <p className="text-gray-600 mt-3">
-            Pilih tools yang sesuai kebutuhan bisnis kamu
+
+          <p className="mt-4 text-gray-600">
+            Semua kalkulator yang paling sering digunakan pelaku UMKM.
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {tools.slice(0, 3).map((tool) => (
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {tools.map((tool) => (
             <ToolCard
-              key={tool.slug}
-              title={tool.title}
-              description={tool.description}
-              category={tool.category}
-              href={`/tools/${tool.slug}`}
+              key={tool.href}
+              {...tool}
             />
           ))}
         </div>

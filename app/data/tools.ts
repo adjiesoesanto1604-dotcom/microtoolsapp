@@ -1,27 +1,26 @@
-export type Tool = {
-  title: string;
-  slug: string;
-  description: string;
-  category: string;
-};
-
-export const tools: Tool[] = [
+export const tools = [
   {
-    title: "Kalkulator Harga Jual",
-    slug: "harga-jual",
-    description: "Tentukan harga jual berdasarkan HPP dan markup.",
-    category: "Keuangan",
+    icon: "📈",
+    title: "Laba Rugi",
+    description: "Hitung laba rugi usaha.",
+    href: "/tools/laba-rugi",
   },
   {
-    title: "Kalkulator Laba Rugi",
-    slug: "laba-rugi",
-    description: "Hitung laba atau rugi usaha dengan cepat.",
-    category: "Keuangan",
+    icon: "💰",
+    title: "Harga Jual",
+    description: "Tentukan harga jual ideal.",
+    href: "/tools/harga-jual",
   },
   {
-    title: "Kalkulator BEP",
-    slug: "bep",
-    description: "Hitung titik impas (Break Even Point) bisnis Anda.",
-    category: "Keuangan",
+    icon: "📊",
+    title: "BEP",
+    description: "Hitung Break Even Point.",
+    href: "/tools/bep",
+  },
+  {
+    icon: "💵",
+    title: "Cash Flow",
+    description: "Catat arus kas usaha.",
+    href: "/tools/cash-flow",
   },
 ];
