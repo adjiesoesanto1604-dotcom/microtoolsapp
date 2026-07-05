@@ -1,42 +1,36 @@
 import Link from "next/link";
 
 type ToolCardProps = {
+  icon: string;
   title: string;
   description: string;
-  category: string;
-  href?: string;
+  href: string;
 };
 
 export default function ToolCard({
+  icon,
   title,
   description,
-  category,
-  href = "#",
+  href,
 }: ToolCardProps) {
   return (
-    <div className="border rounded-xl p-5 bg-white hover:shadow-md transition duration-200">
-      {/* Category */}
-      <div className="text-xs text-blue-600 mb-2 font-medium">
-        {category}
-      </div>
+    <Link
+      href={href}
+      className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+    >
+      <div className="text-3xl">{icon}</div>
 
-      {/* Title */}
-      <h3 className="text-lg font-semibold text-gray-900">
+      <h3 className="mt-4 text-xl font-semibold text-gray-900">
         {title}
       </h3>
 
-      {/* Description */}
-      <p className="text-sm text-gray-600 mt-2">
+      <p className="mt-2 text-sm text-gray-600">
         {description}
       </p>
 
-      {/* Button */}
-      <Link
-        href={href}
-        className="inline-block mt-4 text-sm text-blue-600 hover:underline"
-      >
+      <span className="mt-5 inline-block font-medium text-blue-600">
         Gunakan →
-      </Link>
-    </div>
+      </span>
+    </Link>
   );
 }
